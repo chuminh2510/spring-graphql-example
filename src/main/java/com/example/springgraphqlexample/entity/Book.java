@@ -16,7 +16,7 @@ public class Book {
     private Integer quantity;
     private Integer price;
     private Integer authorId;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "authorId", referencedColumnName = "id", insertable = false, updatable = false)
     private User author;
     @Enumerated(EnumType.STRING)
