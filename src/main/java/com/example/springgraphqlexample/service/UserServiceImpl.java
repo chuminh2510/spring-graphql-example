@@ -16,6 +16,11 @@ public class UserServiceImpl implements UserService {
         return userRepo.findAll();
     }
 
+    @Override
+    public User findById(Integer id) {
+        return userRepo.findById(id).get();
+    }
+
     @Autowired
     public void setUserRepo(UserRepository userRepo) {
         this.userRepo = userRepo;

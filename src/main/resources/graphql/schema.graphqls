@@ -23,5 +23,6 @@ enum BookStatus {
 
 type Query {
     findAllUser: [User]!
+    findUserById(id: Int): User!
     findAllBook: [Book]!
 }
